@@ -11,7 +11,7 @@ const ChatGPTComponent = () => {
       const response = await axios.post(
         "https://api.openai.com/v1/completions",
         {
-          model: "davinci-002",
+          model: "gpt-3.5-turbo-instruct",
           prompt: question,
           max_tokens: 150,
         },
