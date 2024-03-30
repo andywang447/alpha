@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./chatGPT.css";
 import axios from "axios";
 
 const ChatGPTComponent = () => {
@@ -25,20 +26,23 @@ const ChatGPTComponent = () => {
       setResponse(response.data.choices[0].text.trim());
     } catch (error) {
       console.error("Error:", error);
-      setResponse(error.message);
+      setResponse(`Sorry! - ${error.message}`);
     }
   };
 
   return (
     <div>
-      <h1>ChatGPT Q&A</h1>
+      <h1>Strawberry Bot</h1>
       <input
+        className="input-box"
         type="text"
         value={question}
         onChange={(e) => setQuestion(e.target.value)}
-        placeholder="Type your question here"
+        placeholder="Ask me a question"
       />
-      <button onClick={sendQuestion}>Send</button>
+      <button className="cute-button" onClick={sendQuestion}>
+        Send
+      </button>
       {response && (
         <div>
           <h2>Response:</h2>

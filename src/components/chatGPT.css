@@ -1,0 +1,27 @@
+.input-box {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+::placeholder {
+    color: lightgrey;
+}
+
+.cute-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+    color: white;
+    cursor: pointer;
+    outline: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cute-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
